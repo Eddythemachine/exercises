@@ -1,0 +1,23 @@
+<html>
+
+  <body>
+    <pre class="mermaid">
+          sequenceDiagram
+          Browser->>Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+          Server-->>Browser: HTML CODE
+          Browser-)Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+          Server-->>Browser: MAIN CSS
+          Browser-)Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+          Server-->>Browser: MAIN JS
+          Browser-)Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+          Server-->>Browser: [{Content:html}]
+
+    </pre>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({startOnLoad: true});
+    </script>
+  </body>
+
+</html>
